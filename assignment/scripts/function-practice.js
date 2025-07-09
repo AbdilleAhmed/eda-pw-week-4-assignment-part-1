@@ -15,31 +15,41 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return (`Hello, ${name}!`) 
 }
 // Remember to call the function to test
-
+  console.log(helloName("Ahmed"))
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  let result = firstNumber + secondNumber
+  return result
 }
 
+console.log(addNumbers(16,75));
+console.log(addNumbers(87,32));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(number1,number2,number3) {
+ let results2 = number1*number2*number3
+ return results2
 }
-
+ multiplyThree(9,8,4)
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  if (number > 0) {
-    return;
-  }
-  return;
+  if (number > 1){
+  return true
+ }else if (number < 1){
+  return false
+ }
+
 }
+console.log(isPositive(0))
+console.log(isPositive(10));
+console.log(isPositive(-1));
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 
@@ -47,15 +57,31 @@ function isPositive(number) {
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+  let last_item ;
+  if(array.length === 0){
+    return `undefined`
+  }else if (array){
+     last_item = array.pop()
+  }
+  return(last_item)
 }
+console.log(getLast["potatoes", "tomatoes", "guava", "oranges"]);
+console.log(getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === value){
+      return true;
+    }
+  }
+return false;
 }
+
+ console.log(find(6,[8,6,5,5]))
 
 // ----------------------
 // Stretch Goals
