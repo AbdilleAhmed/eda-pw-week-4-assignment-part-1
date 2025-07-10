@@ -83,23 +83,36 @@ return false;
 
  console.log(find(6,[8,6,5,5]))
 
+
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+ let stringChar = string[0] === letter;
+ if (stringChar){
+  return true
+ }else{
+  return false 
+ }
 }
+console.log("b","banana")
 
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
+  for(let i = 0; i < array.length; i++){
+    sum+= array[i]
+  }
+ return sum;
+}
+console.log(sumAll([89, 98, 14, 6])); 
 
   // TODO: return the sum
-}
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
